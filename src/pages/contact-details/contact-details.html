@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contact Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h3 text-center *ngIf="selectedContact"></h3>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>First Name</ion-label>
+      <ion-input type="text" value="{{selectedContact.firstName}}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Last Name</ion-label>
+      <ion-input type="text" value="{{selectedContact.lastName}}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Company</ion-label>
+      <ion-input type="text" value="{{selectedContact.company}}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Street</ion-label>
+      <ion-input type="text" value="{{selectedContact.street}}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>City</ion-label>
+      <ion-input type="text" value="{{selectedContact.city}}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>State</ion-label>
+      <ion-input type="text" value="{{selectedContact.state}}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Zip</ion-label>
+      <ion-input type="text" value="{{selectedContact.zip}}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Phone</ion-label>
+      <ion-input type="text" value="{{selectedContact.phone}}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="text" value="{{selectedContact.email}}"></ion-input>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
