@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { Observable } from 'rxjs/Observable';
@@ -9,10 +9,10 @@ import {Contact} from '../../providers/contacts/contact.model';
 import {ContactsProvider} from "../../providers/contacts/contacts";
 
 @Component({
-  selector: 'page-list',
+  selector: 'page-contact-list',
   templateUrl: 'contact-list.html'
 })
-export class ContactListPage implements OnInit{
+export class ContactListPage {
 
   /**
    * Contacts observable
@@ -33,7 +33,7 @@ export class ContactListPage implements OnInit{
   /**
    * Initialize, retrieve contact-list data
    */
-  ngOnInit() {
+  ionViewDidLoad() {
     this.contacts$ = this.provider.getContacts();
   }
 
